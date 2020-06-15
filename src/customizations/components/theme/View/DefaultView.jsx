@@ -19,13 +19,30 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 
+import { endsWith, find, keys } from 'lodash';
 const messages = defineMessages({
   unknownBlock: {
     id: 'Unknown Block',
     defaultMessage: 'Unknown Block {block}',
   },
 });
-
+/**
+ * Has blocks data.
+ * @function hasBlocksData
+ * @param {Object} props Properties.
+ * @return {boolean} True if it has blocks data.
+ */
+export function hasBlocksDataWithContent(props) {
+  var finded = false;
+  finded = find(
+      keys(props),
+      (key) => key !== 'volto.blocks' && endsWith(key, 'blocks'),
+    ) !== undefined
+  if (finded) {
+    finded = Object.keys(props.blocks).length !== 0;
+  }
+  return finded;
+};
 /**
  * Component to display the default view.
  * @function DefaultView
@@ -36,7 +53,7 @@ const DefaultView = ({ content, intl, location }) => {
   const blocksFieldname = getBlocksFieldname(content);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
 
-  return hasBlocksData(content) ? (
+  return hasBlocksDataWithContent(content) ? (
     <div id="page-document" className="ui container">
       {map(content[blocksLayoutFieldname].items, (block) => {
         const Block =
@@ -79,7 +96,6 @@ const DefaultView = ({ content, intl, location }) => {
           <a href={content.remoteUrl}>{content.remoteUrl}</a>
         </span>
       )}
-      <div>bsuttor</div>
       {content.text && (
         <div
           dangerouslySetInnerHTML={{
