@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { settings } from '~/config';
 import { FormattedMessage } from 'react-intl';
 
 import Moment from 'moment';
 import { Link } from 'react-router-dom';
-import { Segment, Container, Image } from 'semantic-ui-react';
-import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import { Segment, Image } from 'semantic-ui-react';
 import { isInternalURL } from '@plone/volto/helpers/Url/Url';
 
 const DefaultTemplate = ({ items, linkMore, isEditMode }) => {
