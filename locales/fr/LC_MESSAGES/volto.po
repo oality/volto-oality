@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: components/BlogView/BlogView
+#: components/FullView/FullView
+msgid "by"
+msgstr "par"
+
+#: components/Blocks/MainSlider/View
+msgid "cutting-edge"
+msgstr "A la pointe"
+
+#: components/Blocks/MainSlider/View
+msgid "cutting_edge_text"
+msgstr "Nous utilisons les outils de dernières générations afin de vous fournir un service de haute qualité. Nos développements sont, évidement, disponibles sur mobile et ordinateur."
+
+#: components/Blocks/MainSlider/View
+msgid "professionalism"
+msgstr "Professionnalisme"
+
+#: components/Blocks/MainSlider/View
+msgid "professionalism_text"
+msgstr "Nous créons uniquement des applications sur mesure, construites avec vous, qui correspondent à vos besoins."
+
+#: components/Blocks/MainSlider/View
+msgid "sustainability"
+msgstr "Pérénité"
+
+#: components/Blocks/MainSlider/View
+msgid "sustainability_text"
+msgstr "Avec l'utilisation de logiciel open source, nous vous garantissons la pérennité de vos projets."

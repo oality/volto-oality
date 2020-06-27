@@ -1,0 +1,41 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language: \n"
+"Language-Team: \n"
+"Content-Type: \n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: components/BlogView/BlogView
+#: components/FullView/FullView
+msgid "by"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "cutting-edge"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "cutting_edge_text"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "professionalism"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "professionalism_text"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "sustainability"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "sustainability_text"
+msgstr ""
