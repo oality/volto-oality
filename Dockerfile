@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn
 COPY . ./
-RUN RAZZLE_API_PATH=https://backend.oality.com yarn build
+RUN RAZZLE_API_PATH=https://oality.com/api yarn build
 
 FROM node:lts-alpine
 WORKDIR /app
