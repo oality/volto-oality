@@ -150,8 +150,12 @@ a:hover {
 }
 
 .language-selector a {
-  padding: 0.5em;
+  padding: 0.35em;
 }
 .ui.vertical.segment {
   border-bottom: 1px solid #00b627;
+}
+
+.ui.basic.segment .header .tools-search-wrapper {
+  margin-left: 0;
 }

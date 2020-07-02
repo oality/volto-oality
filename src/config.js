@@ -33,7 +33,6 @@ import { BlogView } from './components';
 
 export const settings = {
   ...defaultSettings,
-  devProxyToApiPath: '',
   isMultilingual: true,
   supportedLanguages: ['en', 'fr'],
   defaultLanguage: 'fr',
