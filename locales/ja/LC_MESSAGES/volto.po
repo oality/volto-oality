@@ -18,8 +18,8 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "X-Is-Fallback-For: ja-jp\n"
 
+#: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
-#: components/FullView/FullView
 msgid "by"
 msgstr ""
 

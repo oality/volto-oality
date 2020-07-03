@@ -26,8 +26,8 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
+#: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
-#: components/FullView/FullView
 msgid "by"
 msgstr ""
 

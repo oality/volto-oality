@@ -17,8 +17,8 @@ msgstr ""
 "Language-Name: Português do Brasil\n"
 "Preferred-Encodings: utf-8\n"
 
+#: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
-#: components/FullView/FullView
 msgid "by"
 msgstr ""
 

@@ -11,8 +11,8 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
-#: components/FullView/FullView
 msgid "by"
 msgstr ""
 
