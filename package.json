@@ -88,7 +88,7 @@
     "node": "^10 || ^12"
   },
   "dependencies": {
-    "@plone/volto": "6.5.0",
+    "@plone/volto": "7.3.0",
     "moment": "2.26.0",
     "react-ga": "3.0.0",
     "react-helmet": "6.1.0",

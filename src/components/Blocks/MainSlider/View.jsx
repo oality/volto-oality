@@ -1,12 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Link } from 'react-router-dom';
 import { Button, Image, Segment } from 'semantic-ui-react';
 import { Icon } from '@plone/volto/components';
-import sliderPNG from './slider-image.png';
-//import slider1 from './perenite300x200.png';
-//import slider2 from './a-la-pointe300x200.jpg';
-//import slider3 from './professionalissme300x200.png';
 import slider1 from './open_source.svg';
 import slider2 from './cutting_edge.svg';
 import slider3 from './pro2.svg';
@@ -19,6 +14,7 @@ const NextArrow = ({ className, style, onClick }) => (
     className={className}
     style={{ ...style, display: 'block' }}
     onClick={onClick}
+    title={<FormattedMessage id="Next" defaultMessage="Next" />}
   >
     <Icon name={rightSVG} size="70px" color="#fff" />
   </Button>
@@ -29,12 +25,13 @@ const PrevArrow = ({ className, style, onClick }) => (
     className={className}
     style={{ ...style, display: 'block' }}
     onClick={onClick}
+    title={<FormattedMessage id="Previous" defaultMessage="Previous" />}
   >
     <Icon name={leftSVG} size="70px" color="#fff" />
   </Button>
 );
 
-const View = (props) => {
+const View = () => {
   return (
     <div className="tile view mainslider">
 
