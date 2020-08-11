@@ -15,3 +15,6 @@ api:
 
 api-run:
 	cd api && make start
+
+upgrade-volto:
+	yarn upgrade --latest @plone/volto
