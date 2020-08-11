@@ -4,6 +4,7 @@
  */
 
 import React from 'react';
+import ReactGA from 'react-ga';
 import { Container, List, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
@@ -21,7 +22,10 @@ const messages = defineMessages({
  * @param {Object} intl Intl object
  * @returns {string} Markup of the component
  */
-const Footer = ({ intl }) => (
+const Footer = ({ intl }) => {
+    ReactGA.initialize('UA-171579968-1');
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    return (
   <Segment
     role="contentinfo"
     vertical
@@ -69,7 +73,7 @@ const Footer = ({ intl }) => (
       </List>
     </Container>
   </Segment>
-);
+)};
 
 /**
  * Property types.
