@@ -30,6 +30,14 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
+#: components/Blocks/MainSlider/View
+msgid "Next"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "Previous"
+msgstr ""
+
 #: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
 msgid "by"

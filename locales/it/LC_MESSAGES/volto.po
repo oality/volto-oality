@@ -11,6 +11,14 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+#: components/Blocks/MainSlider/View
+msgid "Next"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+msgid "Previous"
+msgstr ""
+
 #: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
 msgid "by"

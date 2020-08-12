@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-03T07:03:10.105Z\n"
+"POT-Creation-Date: 2020-08-11T13:48:28.628Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -12,6 +12,16 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
+
+#: components/Blocks/MainSlider/View
+# defaultMessage: Next
+msgid "Next"
+msgstr ""
+
+#: components/Blocks/MainSlider/View
+# defaultMessage: Previous
+msgid "Previous"
+msgstr ""
 
 #: components/Blocks/Listing/BlogsTemplate
 #: components/BlogView/BlogView
