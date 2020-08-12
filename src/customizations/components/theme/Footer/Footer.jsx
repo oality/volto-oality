@@ -4,10 +4,10 @@
  */
 
 import React from 'react';
-import ReactGA from 'react-ga';
 import { Container, List, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
+import { useGoogleAnalytics } from 'volto-google-analytics'
 
 const messages = defineMessages({
   copyright: {
@@ -23,8 +23,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => {
-    ReactGA.initialize('UA-171579968-1');
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    useGoogleAnalytics()
     return (
   <Segment
     role="contentinfo"
@@ -73,7 +72,7 @@ const Footer = ({ intl }) => {
       </List>
     </Container>
   </Segment>
-)};
+);
 
 /**
  * Property types.
