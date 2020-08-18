@@ -11,7 +11,10 @@
     "build": "razzle build",
     "test": "razzle test --env=jsdom --passWithNoTests",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "i18n": "NODE_ENV=production node node_modules/@plone/volto/src/i18n.js"
+    "i18n": "NODE_ENV=production node node_modules/@plone/volto/src/i18n.js",
+    "develop:npx": "npx -p mrs-developer missdev --config=jsconfig.json --output=addons",
+    "develop": "missdev --config=jsconfig.json --output=addons",
+    "preinstall": "if [ -f $(pwd)/node_modules/.bin/missdev ]; then yarn develop; else yarn develop:npx; fi"
   },
   "jest": {
     "modulePathIgnorePatterns": [
@@ -32,7 +35,8 @@
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@package/(.*)$": "<rootDir>/src/$1",
-      "~/(.*)$": "<rootDir>/src/$1"
+      "~/(.*)$": "<rootDir>/src/$1",
+      "volto-google-analytics/(.*)$": "<rootDir>/src/addons/volto-google-analytics/src/$1"
     },
     "coverageThreshold": {
       "global": {
@@ -90,11 +94,12 @@
   "dependencies": {
     "@plone/volto": "7.7.0",
     "moment": "2.26.0",
+    "mrs-developer": "1.4.0",
     "react-ga": "3.0.0",
     "react-helmet": "6.1.0",
     "react-slick": "0.26.1",
     "slick-carousel": "1.8.1",
-    "volto-google-analytics": "https://github.com/collective/volto-google-analytics"
+    "volto-google-analytics": "collective/volto-google-analytics"
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "7.10.1",
@@ -112,6 +117,14 @@
     "stylelint": "13.3.3",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "8.0.1",
-    "stylelint-prettier": "1.1.2"
-  }
+    "stylelint-prettier": "1.1.2",
+    "mrs-developer": "1.4.0"
+  },
+  "private": true,
+  "workspaces": [
+    "src/addons/volto-google-analytics"
+  ],
+  "addons": [
+    "volto-google-analytics"
+  ]
 }

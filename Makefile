@@ -18,3 +18,6 @@ api-run:
 
 upgrade-volto:
 	yarn upgrade --latest @plone/volto
+
+image:
+	docker build -t oality/website .

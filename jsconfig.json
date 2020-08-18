@@ -1,6 +1,9 @@
 {
     "compilerOptions": {
         "paths": {
+            "volto-google-analytics": [
+                "addons/volto-google-analytics"
+            ]
         },
         "baseUrl": "src"
     }

@@ -7,7 +7,7 @@ import React from 'react';
 import { Container, List, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import { FormattedMessage, defineMessages, injectIntl } from 'react-intl';
-import { useGoogleAnalytics } from 'volto-google-analytics'
+import { useGoogleAnalytics } from 'volto-google-analytics';
 
 const messages = defineMessages({
   copyright: {
@@ -23,7 +23,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component
  */
 const Footer = ({ intl }) => {
-    useGoogleAnalytics()
+    useGoogleAnalytics();
     return (
   <Segment
     role="contentinfo"
@@ -72,7 +72,7 @@ const Footer = ({ intl }) => {
       </List>
     </Container>
   </Segment>
-);
+)};
 
 /**
  * Property types.

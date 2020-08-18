@@ -6,7 +6,7 @@ const packageJson = require(path.join(projectRootPath, 'package.json'));
 const addonsAliases = [];
 if (packageJson.addons) {
   const addons = packageJson.addons;
-  addons.forEach(addon => {
+  addons.forEach((addon) => {
     const addonPath = `${addon}/src`;
     addonsAliases.push([addon, addonPath]);
   });
