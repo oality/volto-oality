@@ -1,10 +1,56 @@
-version: '3'
+version: '2.4'
 
 services:
-  ploneapi:
-    image: kitconcept/plone.restapi:latest
+  site:
+    build:
+      context: .
+      args:
+        backend: http://volto.localhost/api
+    image: oality/site:latest
     ports:
-      - "8080:8080"
-    # Uncomment if you need the data to be persistent
-    # volumes:
-    #   - ./data/:/data/
+      - 3000
+    labels:
+      - traefik.http.routers.website.rule=Host(`volto.localhost`)
+  zeo:
+    build:
+      context: api
+    image: oality/buildout-oality:latest
+    expose:
+      - 8100
+    volumes:
+      - ./api/var/blobstorage:/data/blobstorage
+      - ./api/var/filestorage:/data/filestorage
+    command: bin/zeoserver fg
+    healthcheck:
+      test: ["CMD", "nc", "-z", "-w5", "127.0.0.1", "8100"]
+      interval: 15s
+      timeout: 30s
+  api:
+    image: oality/buildout-oality:latest
+    volumes:
+      - ./api/var/blobstorage:/data/blobstorage
+    ports:
+      - 8080:8080
+    links:
+      - zeo
+    command: fg
+    healthcheck:
+      interval: 15s
+      timeout: 30s
+    labels:
+      - traefik.http.routers.instance.rule=Host(`volto.localhost`) && PathPrefix(`/api`)
+      - traefik.http.routers.instance.middlewares=plone-api-path
+      - traefik.http.middlewares.plone-api-path.replacepathregex.regex=^/api(.*)
+      - traefik.http.middlewares.plone-api-path.replacepathregex.replacement=/VirtualHostBase/http/volto.localhost/Plone/VirtualHostRoot/_vh_api/$$1
+  reverse-proxy:
+    image: traefik:2.2
+    command:
+      #- "--log.level=DEBUG"
+      - '--api.insecure=true'
+      - '--providers.docker'
+      - '--entryPoints.web.address=:80'
+    ports:
+      - '80:80'
+      - '8000:8080'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
