@@ -1,4 +1,5 @@
 FROM node:lts-alpine as build
+ARG backend=https://oality.com/api
 LABEL maintainer="Benoît Suttor"
 ENV RAZZLE_GA_CODE UA-171579968-1
 WORKDIR /app
@@ -7,7 +8,7 @@ RUN apk add --update --no-cache --virtual .build-deps git
 RUN yarn
 COPY . ./
 #RUN RAZZLE_API_PATH=https://oality.com/api yarn build
-RUN RAZZLE_API_PATH=https://oality.com/api yarn build
+RUN RAZZLE_API_PATH=${backend} yarn build
 
 FROM node:lts-alpine
 ENV RAZZLE_GA_CODE UA-171579968-1
@@ -24,3 +25,4 @@ CMD ["yarn", "start:prod"]
 #COPY nginx/nginx.conf /etc/nginx/conf.d
 #EXPOSE 80
 #CMD ["nginx", "-g", "daemon off;"]
+
