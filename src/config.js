@@ -27,13 +27,14 @@ import {
   views as defaultViews,
   widgets as defaultWidgets,
   blocks as defaultBlocks,
+  addonReducers as defaultAddonReducers,
+  addonRoutes as defaultAddonRoutes,
 } from '@plone/volto/config';
 
 import { BlogView } from './components';
 
 export const settings = {
   ...defaultSettings,
-  devProxyToApiPath: '',
   isMultilingual: true,
   supportedLanguages: ['en', 'fr'],
   defaultLanguage: 'fr',
@@ -110,5 +111,5 @@ export const blocks = {
   },
 };
 
-export const addonRoutes = [];
-export const addonReducers = {};
+export const addonRoutes = [...defaultAddonRoutes];
+export const addonReducers = { ...defaultAddonReducers };
