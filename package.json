@@ -2,7 +2,7 @@
   "name": "volto-starter-kit",
   "description": "Volto Starter Kit",
   "license": "MIT",
-  "version": "6.2.0",
+  "version": "10.3.0",
   "scripts": {
     "start": "razzle start",
     "postinstall": "yarn omelette && yarn patches",
@@ -90,7 +90,7 @@
     "ignoreFiles": "theme/themes/default/**/*.overrides"
   },
   "engines": {
-    "node": "^10 || ^12"
+    "node": "^10 || ^12 || ^14"
   },
   "dependencies": {
     "@plone/volto": "10.3.0",
