@@ -93,7 +93,7 @@
     "node": "^10 || ^12"
   },
   "dependencies": {
-    "@plone/volto": "9.0.0",
+    "@plone/volto": "10.3.0",
     "moment": "2.26.0",
     "mrs-developer": "1.4.0",
     "react-ga": "3.0.0",

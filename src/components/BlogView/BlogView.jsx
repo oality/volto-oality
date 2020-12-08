@@ -74,6 +74,13 @@ BlogView.propTypes = {
         description: PropTypes.string,
         url: PropTypes.string,
         image: PropTypes.object,
+        image: PropTypes.shape({
+          scales: PropTypes.shape({
+            thumb: PropTypes.shape({
+              download: PropTypes.string,
+            }),
+          }),
+        }),
         image_caption: PropTypes.string,
         effective: PropTypes.string,
         creators: PropTypes.string,

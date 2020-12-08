@@ -34,11 +34,12 @@ const DefaultTemplate = ({ items, linkMore, isEditMode }) => {
                 <Divider vertical />
                 <Grid.Row verticalAlign="middle">
                   <Grid.Column>
+                    {item.image && (
                     <Image
                       size="small"
                       alt={item.image_caption ? item.image_caption : item.title}
                       src={item.image.scales.preview.download}
-                    />
+                    />)}
 
                   </Grid.Column>
 
@@ -61,7 +62,22 @@ const DefaultTemplate = ({ items, linkMore, isEditMode }) => {
 };
 
 DefaultTemplate.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
+  items: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        description: PropTypes.string,
+        url: PropTypes.string,
+        image: PropTypes.shape({
+          scales: PropTypes.shape({
+            preview: PropTypes.shape({
+              download: PropTypes.string,
+            }),
+          }),
+        }),
+        image_caption: PropTypes.string,
+        '@type': PropTypes.string,
+      }),
+   ).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
 };
