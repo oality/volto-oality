@@ -3,8 +3,8 @@ ARG backend=https://oality.com/api
 LABEL maintainer="Benoît Suttor"
 ENV RAZZLE_GA_CODE UA-171579968-1
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN apk add --update --no-cache --virtual .build-deps git
+COPY package.json yarn.lock mrs.developer.json ./
+RUN apk add --update --no-cache --virtual .build-deps git python3 make g++
 RUN yarn
 COPY . ./
 #RUN RAZZLE_API_PATH=https://oality.com/api yarn build
