@@ -94,7 +94,7 @@
   },
   "dependencies": {
     "@plone/volto": "10.3.0",
-    "moment": "2.26.0",
+    "moment": "2.29.2",
     "mrs-developer": "1.4.0",
     "react-ga": "3.0.0",
     "react-helmet": "6.1.0",
